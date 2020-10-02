@@ -1,0 +1,12 @@
+
+
+.dropdown__button {
+  display: flex;
+  flex-direction: inline;
+  justify-content: space-evenly;
+  width: 200px;
+  background: transparent;
+  opacity: 1;
+}
+
+

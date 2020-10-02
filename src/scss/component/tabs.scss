@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+}
+@font-face {
+  font-family: "Nunito Bold";
+  src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+}
+
+.nav {
+  @include directify($directions) {
+    #{directed('padding-left')}: 10px;
+  }
+}
+
+.tabs {
+  overflow: hidden;
+  width: "500px";
+
+  .tabs__wrap {
+    @include directify($directions) {
+      text-align: directed("left");
+    }
+
+    width: 100%;
+    border: 0.5px solid #094074;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+    // height: min-content;
+    // -webkit-min-width: min-content;
+  }
+
+  .nav-tabs {
+    flex-wrap: nowrap;
+
+    li {
+      .nav-link {
+        padding: 10px 20px;
+        color: #094074;
+        text-align: left;
+        letter-spacing: 0px;
+        opacity: 1;
+        font-family: "Nunito";
+        font-weight: bold;
+        @include directify($directions) {
+          #{directed('margin-right')}: 0px;
+        }
+        // transition: background-color 0.3s;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active {
+          outline: none;
+        }
+      }
+
+      .nav-link.active,
+      .nav-link.active:focus,
+      .nav-link.active:hover {
+        background-color: #eeeeee;
+        color: #b7076b;
+      }
+
+    
+    }
+  }
+
+  .tab-pane {
+    padding-top: 20px;
+  }
+
+  &.tabs--bordered-top {
+    .nav-tabs {
+      li .nav-link {
+        border-top: 2px solid transparent;
+        border-radius: 0;
+      }
+
+      li .nav-link.active {
+        &,
+        &:focus,
+        &:hover {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  &.tabs--bordered-bottom {
+    .nav-tabs {
+      li .nav-link {
+        border-color: transparent;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 11px;
+      }
+
+      li .nav-link.active {
+        &,
+        &:focus,
+        &:hover {
+          border-radius: 0;
+          border-color: transparent;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &.tabs--justify {
+    .nav-tabs {
+      display: flex;
+      flex-wrap: nowrap;
+
+      li {
+        width: 100%;
+
+        a {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &.tabs--vertical {
+    overflow-y: visible;
+
+    .tabs__wrap {
+      display: flex;
+    }
+
+    .nav-tabs {
+      border-bottom: none;
+      width: 90px;
+      height: 100%;
+      flex-wrap: wrap;
+
+      li {
+        margin-top: 0;
+        width: 100%;
+
+        .nav-link {
+          @include directify($directions) {
+            #{directed('padding-right')}: 10px;
+            #{directed('padding-left')}: 0px;
+            #{directed('margin-right')}: 0px;
+          }
+          padding-top: 10px;
+          padding-bottom: 10px;
+          transition: background-color 0.3s;
+          border-radius: 0;
+          border: none;
+
+          &:hover,
+          &:focus,
+          &:active {
+            outline: none;
+          }
+        }
+
+        .nav-link.active,
+        .nav-link.active:focus,
+        .nav-link.active:hover {
+          background-color: transparent;
+        }
+
+      
+      }
+    }
+
+    .tab-pane {
+      padding-top: 0;
+      @include directify($directions) {
+        #{directed('padding-left')}: 20px;
+      }
+    }
+
+    &.tabs--vertical-colored {
+      .nav-tabs {
+        li {
+          .nav-link {
+            @include directify($directions) {
+              #{directed('padding-left')}: 10px;
+            }
+            text-align: center;
+          }
+
+          .nav-link.active,
+          .nav-link.active:focus,
+          .nav-link.active:hover {
+            color: #646777;
+          }
+        }
+      }
+    }
+  }
+}

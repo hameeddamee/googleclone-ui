@@ -1,0 +1,503 @@
+.account {
+  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  overflow-y: auto;
+
+  &.account--not-photo {
+    @include themify($themes) {
+      background: themed("colorBackgroundBody2");
+    }
+  }
+
+  .account__name--text {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Nunito;
+  }
+
+  .account__name--signup {
+    letter-spacing: 0;
+    color: #ffffff;
+    text-align: center;
+    font: 20px/15px Nunito;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+
+  .input__text--field::placeholder {
+    color: rgba(128, 128, 128, 0.836);
+    font-size: 12px;
+    text-align: start;
+  }
+  .input__text--field {
+    border-bottom: 1px solid rgba(158, 156, 156, 0.801) !important;
+  }
+  .success__text {
+    color: #ffffff;
+    font-size: 22px;
+  }
+  .message__header {
+    color: #ffffff;
+  }
+
+  .link__to:hover {
+    background: white;
+    color: #c81a67;
+  }
+
+  .link__to {
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 25px;
+    border: 1px solid white;
+    padding: 10px 20px;
+  }
+  .account__name--text {
+    font-size: 25px;
+    color: #ffffff;
+  }
+
+  .input__field--inner::placeholder {
+    font-size: 30px;
+    color: red;
+  }
+
+  &.account--photo {
+    // background: linear-gradient(
+    //     to right bottom,
+    //     rgb(41, 50, 72),
+    //     rgba(41, 50, 72, 0.8)
+    //   ),
+    //   url() no-repeat center !important;
+    background-size: cover;
+
+    .wrapper__user--select {
+      height: 100vh;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      overflow-y: auto;
+      @include themify($themes) {
+        background: themed("colorBackgroundBody2");
+      }
+    }
+
+    .account__card {
+      background-color: #fff;
+      border-radius: 20px;
+      color: #000;
+    }
+
+    .form__form-group-icon,
+    .form__form-group-button {
+      background: transparent;
+      border-bottom: 1px solid rgb(163, 160, 160) !important;
+    }
+
+    .form__form-group-icon,
+    input:not(:last-child) {
+      @include directify($directions) {
+        #{directed('border-right')}: none;
+      }
+    }
+
+    .form__form-group-button,
+    input {
+      @include directify($directions) {
+        #{directed('border-left')}: none;
+      }
+    }
+
+    .form__form-group-button.active {
+      svg {
+        fill: rgb(116, 5, 116);
+      }
+    }
+
+    .account__title {
+      color: #ffffff;
+    }
+  }
+}
+
+.user__select-card {
+  width: 130px;
+  height: 130px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 2.5px 2.5px #fc05c2;
+  padding: 0em;
+
+  &.user__select-card:hover {
+    background: #740574;
+    .account__select--text {
+      color: #ffffff !important;
+    }
+   
+  }
+
+ 
+}
+
+.account__select--text {
+  color: #e33760 !important;
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.user__select--cutter {
+  background-size: cover;
+  // background: url(../shared/assets/img/pattern-cutter.svg) no-repeat;
+  height: 5rem;
+  width: 70%;
+  margin: auto;
+  padding: 0;
+}
+.user__select--tailor {
+  background-size: 120px;
+  // background: url(../shared/assets/img/tailor.svg) no-repeat;
+  height: 5rem;
+  width: 70%;
+  margin: auto;
+  padding: 0;
+}
+.user__select--designer {
+  background-size: 120px;
+  // background: url(../shared/assets/img/fashion-designer.svg) no-repeat;
+  height: 5rem;
+  width: 70%;
+  margin: auto;
+  padding: 0;
+}
+.user__select--specialist {
+  background-size: 120px;
+  // background: url(../shared/assets/img/fitting-specialist.svg) no-repeat;
+  height: 5rem;
+  width: 70%;
+  margin: auto;
+  padding: 0;
+}
+
+.account__wrapper {
+  @include directify($directions) {
+    text-align: directed("left");
+  }
+  margin: auto;
+  padding: 20px;
+}
+
+.account__card {
+  @include themify($themes) {
+    background-color: themed("colorBackground");
+  }
+  background-color: #ffffff;
+  padding: 50px 60px;
+  max-width: 412px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.account__icon {
+  margin: 0 auto;
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+}
+
+.account__profile {
+  text-align: center;
+}
+
+.register__btns {
+  @include directify($directions) {
+    #{directed('margin-left')}: 0px !important;
+  }
+  .account__btn:hover {
+    background: rgb(116, 5, 116);
+  }
+}
+
+.account__btns {
+  display: flex;
+  width: calc(100% + 10px);
+  @include directify($directions) {
+    #{directed('margin-right')}: 0px;
+    #{directed('margin-left')}: -10px;
+  }
+  margin-top: 10px;
+  margin-bottom: -20;
+
+  a {
+    @include directify($directions) {
+      #{directed('margin-right')}: 0px;
+      #{directed('margin-left')}: 10px;
+    }
+    margin-bottom: 20px;
+    white-space: nowrap;
+  }
+}
+
+.account__btn {
+  width: 100%;
+  border-radius: 22px;
+  border: unset;
+  @include directify($directions) {
+    #{directed('margin-right')}: 0px;
+  }
+
+  &--primary {
+    background: transparent
+      linear-gradient(
+        180deg,
+        $color-yellow -50%,
+        $color-red 47%,
+        $color-pink 100%
+      )
+      0% 0% no-repeat padding-box;
+    color: #fff !important;
+  }
+
+  &--secondary {
+    background-color: #353a50;
+    color: #fff !important;
+  }
+}
+
+.account__btn--secondary:hover {
+  background-color: rgb(116, 5, 116);
+}
+
+.account__avatar {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user__card {
+  width: 100%;
+  margin: auto;
+}
+
+.account__name {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 15px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: #fff !important;
+  text-align: center;
+  font-style: normal;
+}
+
+#fitted__bold {
+  font-size: 20px !important;
+  font-weight: bold;
+}
+
+.account__sub {
+  letter-spacing: 0;
+  color: #ffffff !important;
+  text-align: center;
+  font-family: "Nunito";
+  letter-spacing: 0px;
+  opacity: 1;
+  font-size: 18px !important;
+}
+
+.account__forgot-password {
+  font-size: 15px;
+  margin-bottom: 5px;
+  width: 100%;
+
+  .forgot__password {
+    &--text {
+      float: right;
+    }
+  }
+  &:hover {
+    color: red;
+    text-decoration: none;
+  }
+  @include directify($directions) {
+    #{directed('left')}: 0px;
+  }
+
+  a {
+    color: $color-blue;
+
+    &:hover {
+      color: $color-blue-hover;
+      text-decoration: none;
+    }
+  }
+}
+
+.page__back--link {
+  float: right;
+}
+
+.user__card {
+  width: 150px;
+  height: 150px;
+}
+
+.account__or {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    height: 1px;
+    width: calc(50% - 90px);
+    background: #dddddd;
+    position: absolute;
+    top: 10px;
+  }
+
+  &:before {
+    @include directify($directions) {
+      #{directed('left')}: 0px;
+    }
+  }
+
+  &:after {
+    @include directify($directions) {
+      #{directed('right')}: 0px;
+    }
+  }
+}
+
+.account__social {
+  text-align: center;
+}
+
+.account__social-btn {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding: 6px;
+  @include directify($directions) {
+    #{directed('margin-right')}: 10px;
+  }
+  transition: all 0.3s;
+  border: none;
+  color: $color-pink;
+  background: transparent;
+  border: solid 1px;
+  margin-right: 10px;
+  font-size: 16px;
+
+  &:last-child {
+    @include directify($directions) {
+      #{directed('margin-right')}: 0px;
+    }
+  }
+
+  svg {
+    fill: #ffffff;
+    height: 20px;
+    width: 20px;
+  }
+
+  &.account__social-btn--facebook {
+    background: #f30dbd;
+
+    &:hover {
+      background: darken(#f30dbd, 10%);
+    }
+  }
+
+  &.account__social-btn--auth0 {
+    margin-top: 20px;
+  }
+}
+
+.account__already--text {
+  color: gray;
+  width: 100%;
+}
+
+.login__link--text {
+  font-size: 15px;
+}
+
+.account__social-text {
+  margin-right: 10px;
+  width: 100% auto;
+  font-size: 13px;
+  color: gray;
+
+  &--bold {
+    font-family: Nunito;
+    font-size: 18px;
+    color: gray;
+  }
+}
+.account__head {
+  margin-bottom: 30px;
+  @include directify($directions) {
+    #{directed('padding-left')}: 10px;
+    #{directed('border-left')}: 4px solid $color-blue;
+  }
+}
+
+.account__logo {
+  font-weight: 700;
+}
+.account__name {
+  font-family: Nunito;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.account__logo-accent {
+  color: $color-blue;
+}
+
+.account__have-account {
+  text-align: center;
+  margin-top: 20px;
+
+  a {
+    color: $color-blue;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-blue-hover;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .account__card {
+    padding: 35px 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .account__btns {
+    flex-wrap: wrap;
+  }
+}
+
+// Animations//

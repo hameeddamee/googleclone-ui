@@ -1,0 +1,231 @@
+@media screen and (max-width: 600px) {
+  .dots_div {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    flex-direction: column;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    top: -0.5px;
+    left: 0.5px;
+    background: none;
+    height: auto;
+    opacity: 1;
+    transition: 0.8s ease;
+  }
+
+  .header {
+    background-color: #b7076b33;
+    width: 100% !important;
+    height: 10% !important;
+    text-align: center;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    position: relative;
+  }
+
+  .dots {
+    display: none;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .header_text {
+    font-family: "Nunito Sans", sans-serif;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    letter-spacing: 0px;
+    font-size: 30px;
+    width: 80%;
+    margin: auto;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .inner-contents_divs {
+    width: 200px;
+    height: auto;
+    margin: auto;
+  }
+  .container,
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    margin: auto;
+  }
+
+  .collection-img {
+    opacity: 1;
+    background: #efefef;
+    border-radius: 38px 38px 0px 0px !important;
+    width: 250px;
+    height: 300px;
+    object-fit: contain;
+  }
+  
+  .content {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    padding-top: 3rem;
+  }
+
+  .nextBtn {
+    font-family: "Nunito", sans-serif;
+    /* top: 25px;  */
+    left: 0;
+    margin: auto;
+    width: 200px;
+    bottom: 100px;
+    height: 70px;
+    background: #251a8c 50% 50% no-repeat padding-box;
+    border: 6px solid #ffffff;
+    border-radius: 56px;
+    opacity: 1;
+    color: #ffffff;
+  }
+  .nextbtn_wrapper {
+    height: 60px;
+    bottom: 60px;
+    margin: auto;
+    position: unset !important;
+  }
+
+ 
+  
+  .react-multi-carousel-list {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    justify-content: space-evenly;
+  }
+
+  .slider_circle {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .atr-text {
+    font-size: 70%;
+    font-weight: 400;
+    text-align: left;
+    font-family: "Nunito";
+    letter-spacing: 0px;
+    opacity: 1;
+    font-style: none;
+  }
+  
+
+  .tabs.tabs--justify .nav-tabs li a {
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .collapsible-options-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    height: 250px;
+  }
+
+  #customizer {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin: auto;
+  }
+
+  .tabs .nav-tabs li .nav-link {
+    color: #094074;
+    text-align: left;
+    letter-spacing: 0px;
+    opacity: 1;
+    font-family: "Nunito";
+    font-weight: bold;
+    cursor: pointer;
+    font-size: smaller;
+  }
+
+  .tabs--justify {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  #customizer_div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  #customizer img {
+    width: 200px;
+    height: 250px;
+  }
+
+  #customizer {
+    margin: auto;
+  }
+  .footer-section--inner {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ebf2f9;
+    width: 100%;
+    /* position: absolute; */
+    left: 0;
+    bottom: 0;
+    height: auto;
+  }
+  .indicators {
+    display: flex;
+    height: 50px;
+    padding-top: 10px;
+  }
+
+  #footer_dots {
+    display: flex;
+    /* flex-direction: inline; */
+    margin: auto;
+    height: 5%;
+  }
+
+  .measure_link p {
+    text-align: center;
+    text-decoration: underline;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #b7076b;
+    opacity: 1;
+    font-size: 20px;
+    background: #ffffff;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) and (max-height: 700px) {
+}
+
+@media screen and (max-width: 400px) and (max-height: 600px) {
+}
